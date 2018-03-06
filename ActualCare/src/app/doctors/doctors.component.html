@@ -1,13 +1,10 @@
 <h2>My Doctors</h2>
-<ul class="heroes">
-  <li *ngFor="let doctor of doctors" (click)="onSelect(doctor)">
-    <span class="badge">{{doctor.id}}</span> {{doctor.name}}
+
+<ul class="doctors">
+  <li *ngFor="let doctor of doctors" >
+    <a routerLink="/detail/{{doctor.id}}">
+      <span class="badge">{{doctor.id}}</span> {{doctor.name}}
+    </a>
   </li>
 </ul>
-<h2>{{ selectedDoctor.name | uppercase }} Details</h2>
-<div><span>id: </span>{{selectedDoctor.id}}</div>
-<div>
-  <label>name:
-    <input [(ngModel)]="selectedDoctor.name" placeholder="name">
-  </label>
-</div>
+
