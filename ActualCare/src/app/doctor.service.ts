@@ -18,7 +18,7 @@ export class DoctorService {
     this.messageService.add('DoctorService: ' + message);
   }
 
-  private doctorsUrl = 'http://localhost:8085/ActualCare/helloworld';//'api/doctors';  // URL to web api
+  private doctorsUrl = 'http://localhost:8085/ActualCare/rest/test/get';// URL to web api
 
   getDoctors(): Observable<Doctor[]> {
     this.messageService.add('DoctorService: fetched doctors');
