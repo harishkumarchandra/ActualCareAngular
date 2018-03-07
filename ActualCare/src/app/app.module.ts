@@ -10,8 +10,13 @@ import { DoctorService } from './doctor.service';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
 import { AppRoutingModule } from './/app-routing.module';
-import { DashboardComponent } from './dashboard/dashboard.component'
-
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './login/login.component';
+import { DoctorComponent } from './doctor/doctor.component';
+import { PatientComponent } from './patient/patient.component';
+import { AdminComponent } from './admin/admin.component'
+import { LoginService } from './login.service';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -20,6 +25,10 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     DoctorDetailComponent,
     MessagesComponent,
     DashboardComponent,
+    LoginComponent,
+    DoctorComponent,
+    PatientComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +36,11 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [DoctorService, MessageService],
+  providers: [
+    DoctorService, 
+    MessageService,
+    LoginService,
+    AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
