@@ -15,10 +15,11 @@ const routes: Routes = [
   { path: 'detail/:id', component: DoctorDetailComponent },
 
   { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+
   { path: 'doctor', component: DoctorComponent },
   { path: 'admin', component: AdminComponent },
-
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'patient', component: PatientComponent}
 
 ];
 
