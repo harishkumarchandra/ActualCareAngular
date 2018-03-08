@@ -8,6 +8,7 @@ import { DoctorComponent } from './doctor/doctor.component';
 import { PatientComponent } from './patient/patient.component';
 import { AdminComponent } from './admin/admin.component';
 import { AuthGuard } from './auth.guard';
+import { RegisterComponent } from './register/register.component'
 
 const routes: Routes = [
   { path: 'doctors', component: DoctorsComponent },
@@ -15,11 +16,12 @@ const routes: Routes = [
   { path: 'detail/:id', component: DoctorDetailComponent },
 
   { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
 
-  { path: 'doctor', component: DoctorComponent },
-  { path: 'admin', component: AdminComponent },
-  { path: 'patient', component: PatientComponent}
+  { path: 'doctor', canActivate: [AuthGuard] ,component: DoctorComponent },
+  { path: 'admin', canActivate: [AuthGuard] ,component: AdminComponent },
+  { path: 'patient', canActivate: [AuthGuard] ,component: PatientComponent}
 
 ];
 
