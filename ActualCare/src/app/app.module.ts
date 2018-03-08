@@ -10,7 +10,10 @@ import { DoctorService } from './doctor.service';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
 import { AppRoutingModule } from './/app-routing.module';
-import { DashboardComponent } from './dashboard/dashboard.component'
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { PatientComponent } from './patient/patient.component'
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -20,6 +23,7 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     DoctorDetailComponent,
     MessagesComponent,
     DashboardComponent,
+    PatientComponent,
   ],
   imports: [
     BrowserModule,
