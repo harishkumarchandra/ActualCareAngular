@@ -11,19 +11,15 @@ import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
-<<<<<<< HEAD
-import { PatientComponent } from './patient/patient.component'
-
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-
-=======
 import { LoginComponent } from './login/login.component';
 import { DoctorComponent } from './doctor/doctor.component';
 import { PatientComponent } from './patient/patient.component';
 import { AdminComponent } from './admin/admin.component'
 import { LoginService } from './login.service';
 import { AuthGuard } from './auth.guard';
->>>>>>> fca0f36819fa15ffcf44a928589574ee46222c17
+
+import { RegisterComponent } from './register/register.component';
+
 
 @NgModule({
   declarations: [
@@ -32,14 +28,11 @@ import { AuthGuard } from './auth.guard';
     DoctorDetailComponent,
     MessagesComponent,
     DashboardComponent,
-<<<<<<< HEAD
-    PatientComponent,
-=======
     LoginComponent,
     DoctorComponent,
     PatientComponent,
     AdminComponent,
->>>>>>> fca0f36819fa15ffcf44a928589574ee46222c17
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

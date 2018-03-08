@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../login.service';
+
 
 @Component({
   selector: 'app-patient',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PatientComponent implements OnInit {
 
-  constructor() { }
+  loginId = 0;
+
+  constructor(private loginService: LoginService) { }
 
   ngOnInit() {
+    this.loginId = this.loginService.getLoginId();
   }
 
 }
