@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'doctors', component: DoctorsComponent },
   { path: 'dashboard', canActivate: [AuthGuard] ,component: DashboardComponent },
   { path: 'detail/:id', component: DoctorDetailComponent },
-
+  { path: 'patient', component: PatientComponent },
   { path: 'login', component: LoginComponent },
   { path: 'doctor', component: DoctorComponent },
   { path: 'admin', component: AdminComponent },
