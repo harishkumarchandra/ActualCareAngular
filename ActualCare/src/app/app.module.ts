@@ -17,6 +17,7 @@ import { PatientComponent } from './patient/patient.component';
 import { AdminComponent } from './admin/admin.component'
 import { LoginService } from './login.service';
 import { AuthGuard } from './auth.guard';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { AuthGuard } from './auth.guard';
     DoctorComponent,
     PatientComponent,
     AdminComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
