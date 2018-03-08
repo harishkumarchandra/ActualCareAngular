@@ -11,10 +11,19 @@ import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+<<<<<<< HEAD
 import { PatientComponent } from './patient/patient.component'
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
+=======
+import { LoginComponent } from './login/login.component';
+import { DoctorComponent } from './doctor/doctor.component';
+import { PatientComponent } from './patient/patient.component';
+import { AdminComponent } from './admin/admin.component'
+import { LoginService } from './login.service';
+import { AuthGuard } from './auth.guard';
+>>>>>>> fca0f36819fa15ffcf44a928589574ee46222c17
 
 @NgModule({
   declarations: [
@@ -23,7 +32,14 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     DoctorDetailComponent,
     MessagesComponent,
     DashboardComponent,
+<<<<<<< HEAD
     PatientComponent,
+=======
+    LoginComponent,
+    DoctorComponent,
+    PatientComponent,
+    AdminComponent,
+>>>>>>> fca0f36819fa15ffcf44a928589574ee46222c17
   ],
   imports: [
     BrowserModule,
@@ -31,7 +47,11 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [DoctorService, MessageService],
+  providers: [
+    DoctorService, 
+    MessageService,
+    LoginService,
+    AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -21,18 +21,19 @@ export class DoctorService {
   private doctorsUrl = 'http://localhost:8085/ActualCare/rest/test/get';// URL to web api
 
   getDoctors(): Observable<Doctor[]> {
-    this.messageService.add('DoctorService: fetched doctors');
     return this.http.get<Doctor[]>(this.doctorsUrl) .pipe(
+      tap(doctors => this.log(`fetched doctors`)),
       catchError(this.handleError('getDoctors', []))
-    );;
+    );
     
   }
 
   getDoctor(id: number): Observable<Doctor> {
-    // Todo: send the message _after_ fetching the hero
-    this.messageService.add(`DoctorService: fetched doctor id=${id}`);
     const url = `${this.doctorsUrl}/${id}`;
-    return this.http.get<Doctor>(url);
+    return this.http.get<Doctor>(url).pipe(
+      tap(_ => this.log(`fetched doctor id=${id}`)),
+      catchError(this.handleError<Doctor>(`getDoctor id=${id}`))
+    );
   }
 
   /**
