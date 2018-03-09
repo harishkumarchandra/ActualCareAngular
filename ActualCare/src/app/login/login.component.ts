@@ -27,7 +27,6 @@ export class LoginComponent implements OnInit {
 
   loginUser(e) {
   	e.preventDefault();
-  	console.log(e);
   	var email = e.target.elements[0].value;
     var password = e.target.elements[1].value;
     console.log(email, password)
