@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Login } from './login';
+import { LoginInfo } from './login';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
@@ -15,8 +15,8 @@ export class LoginService {
 
   private loginsUrl = 'http://18.217.216.74:8085/ActualCare/rest/login/get';
 
-  getLogins(): Observable<Login[]> {
-    return this.http.get<Login[]>(this.loginsUrl);
+  getLogins(): Observable<LoginInfo[]> {
+    return this.http.get<LoginInfo[]>(this.loginsUrl);
   }
 
   constructor(private http: HttpClient) { 

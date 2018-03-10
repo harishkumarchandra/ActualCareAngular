@@ -1,5 +1,9 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-import { DoctorsComponent } from '../doctors/doctors.component'
+import { DoctorsComponent } from '../doctors/doctors.component';
+import{Insurance} from '../insurance'
+import{Doctor} from '../doctor'
+import{LoginInfo} from '../login'
+import{PersonalInfo} from '../personalInfo'
 
 @Component({
   selector: 'app-register',
@@ -8,7 +12,7 @@ import { DoctorsComponent } from '../doctors/doctors.component'
 })
 export class RegisterComponent implements OnInit {
 
-  
+  myInsurance: Insurance;
 
   register(e){
     e.preventDefault();
@@ -50,7 +54,5 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
     
   }
-
-  
 
 }
