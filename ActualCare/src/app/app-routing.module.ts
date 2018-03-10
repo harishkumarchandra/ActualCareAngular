@@ -14,7 +14,8 @@ const routes: Routes = [
   { path: 'doctors', component: DoctorsComponent },
   { path: 'dashboard',component: DashboardComponent },
   { path: 'detail/:id', component: DoctorDetailComponent },
-
+  
+ 
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },

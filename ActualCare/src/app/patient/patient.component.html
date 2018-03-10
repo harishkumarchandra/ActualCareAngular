@@ -1,3 +1,149 @@
+
+<div class="container-fluid">
+    <div class="well">
+        <div class="well">
+<h2>Hello, welcome to your ActualCare home page, PATIENT_NAME !</h2>
+        </div>
+        <div class="well">
+<h4>Your create diagnosis is as follows: DIAGONSIS_INFO</h4>
+<h4>Your current PCP is: DOCTOR NAME</h4>
+<h4>Our records indicate that you have the following insurance: INSURANCE_NAME</h4>
+        </div>
+    </div>
+    <br>
+    <div class="well">
+            <p>Please Remember To Take Your Medication!</p>
+                <table border="2px" id="medtable" name="medtable">
+                    <thead>
+                        <tr>
+                            <td>MEDICATION</td>
+                            <td>TIME</td>
+                            <td>ADDTIONAL INFORMATION</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>        
+    <br>
+    <div class="well">
+            <h4>Something making you itchy?</h4>
+        <form id="allergyform" name ="allergyform">
+            <h5>Please entire any allegeries that you may have, one at a time, to ensure you 
+                receive the safest, most appriorate care possible.
+            </h5>
+            <p>Do you have an allergies?<input type="text" id="allergy" name="allgery"
+                ><button type="submit">SUBMIT ALLERGY</button>
+            </p>
+        </form>
+    </div>
+
+    <div class="well">
+        <h4>Not feeling well?</h4>
+            <form id="symptomform" name ="symptomform">
+                <h5>Please entire any symptoms that you may have currently, to ensure your DOCTOR
+                    has all the information nessaccar yo provide you with the best possible diagonsis.
+                </h5>
+                <p>What are your current symptoms?<input type="text" id="symptom" name="symptom"
+                    ><button type="submit">SUBMIT symptom</button>
+                </p>
+            </form>
+        </div>
+        <br>
+        <div class="well">
+            <p>You will find your next upcoming appointment below:</p>
+                <table border="2px" id="currentapptable" name="currentapptable">
+                    <thead>
+                        <tr>
+                            <td>DATE</td>
+                            <td>TIME</td>
+                            <td>DOCTOR</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+        <br>
+        <div class="well">
+                <p>Below you will find the all your request appointments and their status</p>
+                    <table border="2px" id="apptable" name="apptable">
+                        <thead>
+                            <tr>
+                                <td>DATE</td>
+                                <td>TIME</td>
+                                <td>DOCTOR</td>
+                                <td>STATUS</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+        <br>
+
+        <form id="newappointment" name="newappointment">
+        <div class="control-group">
+                <!-- Date Of Event -->
+                <label class="control-label" for="dateof">Date Of Event?</label>
+                <div class="controls">
+                    <input type="date" name="dateof" required id="dateof">
+                    <p class="help-block">Please select the date of when you would like to request this
+                        new appointment.
+                    </p>
+                </div>
+                <!-- Time Of Event -->
+                <label class="control-label" for="timeof">Time Of Event?</label>
+                <div class="controls">
+                    <input type="time" name="timeof" required id="timeof"
+                        class="input-xlarge" required>
+                    <p class="help-block">Please enter when you would like to 
+                        request this new appointment</p>
+                </div>
+                <button type="submit" class="btn btn-default">Request New Appointment</button>
+            </div>
+        </form>
+
+
+        <h3>Do You Have Any Medical Records you would like the doctor to see?</h3>
+        <h4>(pdf, png, jpeg, txt, msg, or doc file type)</h4>
+    <form enctype='multipart/form-data' id="medicalrecord" name="medicalrecord">
+        <div class="fileinput fileinput-new" data-provides="fileinput"
+            id=afile>
+            <span class="btn btn-default btn-file"><span>Choose
+                    file</span><input type="file" class="form-control-file" id="ufile"
+                name="ufile"
+                accept=".png, .pdf, .jpeg, .jpg, .txt, .doc, .docx, .msg"
+                multiple></span> <span class="fileinput-filename"></span><span
+                class="fileinput-new">No file chosen</span>
+        </div>
+        <br>
+        <div class="control-group">
+                <!-- Button -->
+                <div class="controls">
+                    <button type="submit" class="btn btn-default">Submit
+                        Medical Records</button>
+                </div>
+                <br> <br>
+            </div>
+        </form>
+</div>
 <p>
   patient works! {{loginId}}
   <a routerLink="/">Go Back</a>
