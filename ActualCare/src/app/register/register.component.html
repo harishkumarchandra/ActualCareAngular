@@ -3,14 +3,14 @@
     <h3><strong>Patient Register</strong></h3><br><br>
 	 
   	<form method="POST" action="#" (submit)="register($event)" id="register">
-      
+      <br>
       <div class = "row">
         <div class="col-sm-6"><label for="text">First name:</label>
   			  <input type="text" class="form-control" id="firstname" required></div>
         <div class="col-sm-6"><label for="text">Last name:</label>
           <input type="text" class="form-control" id="lastname" required></div>
       </div>  
-
+      <br>
       <div class = "row">
           <div class="col-sm-6"><label for="text">Gender:</label><br>
             <select name="insurance">
@@ -22,7 +22,7 @@
       <div class= "col-sm-6"><label for="number">Age:</label>
         <input type="number" class="form-control" id="age" required></div>
       </div>
-
+      <br>
       <div class = "row">
       <div class="col-sm-3"><label for="number">Door No:</label>
         <input type="number" class="form-control" id="door" required></div>
@@ -33,7 +33,7 @@
       <div class="col-sm-3"><label for="text">State:</label>
         <input type="text" class="form-control" id="state" required></div>
       </div>
-      
+      <br>
       <div class = "row">
       <div class="col-sm-6"><label for="email">Email:</label>
         <input type="email" class="form-control" id="email" required></div>
@@ -42,17 +42,9 @@
       </div>
       
       <!-- style="margin-top: 15px;" class="col-sm-4"-->
-      <div class="form-group"><label for="text">Insurance:</label><br>
-  			<select name="insurance">
-    				<option value="UNITED_HEALTH">UNITED_HEALTH</option>
-    				<option value="WELL_CARE">WELL_CARE</option>
-    				<option value="WELL_POINT">WELL_POINT</option>
-    				<option value="OSCAR">OSCAR</option>
-    				<option value="KAISER">KAISER</option>
-    				<option value="NO_INSURANCE">NO_INSURANCE</option>
-				</select>
-			</div>  		
-      
+      <br>
+      <app-doctors (messageEvent)="receiveMessage($event)"></app-doctors>
+
       <button style="margin-top: 15px;" type="submit" class="btn btn-success">Register</button>
   		<button style="margin-top: 15px;" type="reset" class="btn btn-default">Reset</button>
 	</form>

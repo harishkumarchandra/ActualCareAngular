@@ -12,7 +12,7 @@ import { RegisterComponent } from './register/register.component'
 
 const routes: Routes = [
   { path: 'doctors', component: DoctorsComponent },
-  { path: 'dashboard', canActivate: [AuthGuard] ,component: DashboardComponent },
+  { path: 'dashboard',component: DashboardComponent },
   { path: 'detail/:id', component: DoctorDetailComponent },
 
   { path: 'login', component: LoginComponent },

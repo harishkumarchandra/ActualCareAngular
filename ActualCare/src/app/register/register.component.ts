@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { DoctorsComponent } from '../doctors/doctors.component'
 
 @Component({
   selector: 'app-register',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+
+  
 
   register(e){
     e.preventDefault();
@@ -32,11 +35,22 @@ export class RegisterComponent implements OnInit {
     var PASSWORD = e.target.elements[9].value;
     console.log(e.target.elements[10].value);
     var INSURANCE = e.target.elements[10].value;
+    console.log(this.pcp);
   }
 
   constructor() { }
 
-  ngOnInit() {
+  pcp:string;
+
+  receiveMessage($event) {
+    this.pcp = 'Dr.' + $event
   }
+  
+
+  ngOnInit() {
+    
+  }
+
+  
 
 }

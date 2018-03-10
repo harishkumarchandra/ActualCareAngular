@@ -16,23 +16,23 @@ export class DoctorDetailComponent implements OnInit {
   @Input() doctor: Doctor;
 
   constructor(
-    private route: ActivatedRoute,
-    private doctorService: DoctorService,
-    private location: Location
+    // private route: ActivatedRoute,
+    // private doctorService: DoctorService,
+    // private location: Location
   ) {}
 
   ngOnInit(): void {
-    this.getDoctor();
+    //this.getDoctor();
   }
   
-  getDoctor(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.doctorService.getDoctor(id)
-      .subscribe(doctor => this.doctor = doctor);
-  }
+  // getDoctor(): void {
+  //   const id = +this.route.snapshot.paramMap.get('id');
+  //   this.doctorService.getDoctor(id)
+  //     .subscribe(doctor => this.doctor = doctor);
+  // }
 
-  goBack(): void {
-    this.location.back();
-  }
+  // goBack(): void {
+  //   this.location.back();
+  // }
   
 }
