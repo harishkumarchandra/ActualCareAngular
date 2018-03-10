@@ -1,4 +1,7 @@
+import { LoginInfo } from './login'
+
 export class Doctor {
-    id: number;
+    Doc_id: number;
     name: string;
+    login: LoginInfo;
   }

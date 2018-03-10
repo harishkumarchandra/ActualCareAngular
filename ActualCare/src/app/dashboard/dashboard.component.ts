@@ -11,7 +11,7 @@ import { LoginService } from '../login.service';
 export class DashboardComponent implements OnInit {
 
   doctors: Doctor[] = [];
-
+  ins: string;
 
   ngOnInit() {
     this.getDoctors();
@@ -20,7 +20,7 @@ export class DashboardComponent implements OnInit {
   constructor(private doctorService: DoctorService, private login:LoginService) { }
 
   getDoctors(): void{
-    this.doctorService.getDoctors()
+    this.doctorService.getDoctors(this.ins)
       .subscribe(doctors => this.doctors=doctors.slice(0,5));
   }
 

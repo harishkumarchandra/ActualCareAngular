@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from '../login.service';
-import { Login } from '../login';
+import { LoginInfo } from '../login';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +10,7 @@ import { Login } from '../login';
 })
 export class LoginComponent implements OnInit {
 
-  logins: Login[];
+  logins: LoginInfo[];
   
 
   constructor(private router:Router, private loginService:LoginService) {   }
@@ -27,12 +27,11 @@ export class LoginComponent implements OnInit {
 
   loginUser(e) {
   	e.preventDefault();
-  	console.log(e);
   	var email = e.target.elements[0].value;
     var password = e.target.elements[1].value;
     console.log(email, password)
     for(let i in this.logins){
-      console.log(this.logins[i].login_id,this.logins[i].email,this.logins[i].password);
+      console.log(this.logins[i].email,this.logins[i].password);
     };
     this.checkLogin(email, password);
   }
@@ -41,7 +40,7 @@ export class LoginComponent implements OnInit {
   private checkLogin(email: string, password: string) {
     for (let i in this.logins) {
       if (email == this.logins[i].email && password == this.logins[i].password) {
-        this.loginService.setLoginId(this.logins[i].login_id);
+        //this.loginService.setLoginId(this.logins[i].login_id);
         
         if (this.logins[i].role == 'patient') {
           this.loginService.setUserLoggedIn();
