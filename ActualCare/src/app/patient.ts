@@ -4,8 +4,18 @@ import{LoginInfo} from './login'
 import{PersonalInfo} from './personalInfo'
 
 export class Patient {
-    myInsurance:Insurance;
-    PCP:Doctor;
+    myInsurance:string;
+    PCP:string;
     login:LoginInfo;
     myPersonalInfo:PersonalInfo;
+    constructor( 
+    myInsurance:string,
+    PCP:string,
+    login:LoginInfo,
+    myPersonalInfo:PersonalInfo) {
+        this.login = login;
+        this.myInsurance = myInsurance;
+        this.myPersonalInfo = myPersonalInfo;
+        this.PCP = PCP;
+    }
 }
