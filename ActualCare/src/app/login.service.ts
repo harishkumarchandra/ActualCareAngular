@@ -14,6 +14,7 @@ export class LoginService {
   private loginId;
 
   private loginsUrl = 'http://18.217.216.74:8085/ActualCare/rest/login/get';
+  //18.217.216.74
 
   getLogins(): Observable<LoginInfo[]> {
     return this.http.get<LoginInfo[]>(this.loginsUrl);
