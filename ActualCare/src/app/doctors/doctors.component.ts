@@ -36,14 +36,14 @@ export class DoctorsComponent implements OnInit {
     this.getDoctors();
   }
 
-  @Output() messageEvent = new EventEmitter<string>();
+  @Output() messageEvent = new EventEmitter<Doctor>();
 
   selectedDoctor: Doctor;
 
   onSelect(doctor: Doctor): void {
     this.pcp = 'Dr.'+doctor.name;
     this.selectedDoctor = doctor;
-    this.messageEvent.emit(this.selectedDoctor.name);
+    this.messageEvent.emit(this.selectedDoctor);
     console.log(doctor)
   }
 

@@ -19,6 +19,7 @@ export class DoctorService {
   }
 
   private doctorsUrl = 'http://18.217.216.74:8085/ActualCare/rest/insurance/get';// URL to web api
+  //18.217.216.74
 
   getDoctors(ins: string): Observable<Doctor[]> {
     const url = `${this.doctorsUrl}/${ins}`;
