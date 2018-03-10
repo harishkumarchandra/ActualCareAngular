@@ -6,6 +6,7 @@ import{LoginInfo} from '../login'
 import{PersonalInfo} from '../personalInfo'
 import { Patient } from '../patient';
 import { RegisterService } from '../register.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -59,9 +60,10 @@ export class RegisterComponent implements OnInit {
     
     console.log(patient);
     this.addPatient(patient);
+    this.router.navigate(['login']);
   }
 
-  constructor(private registerService:RegisterService) { }
+  constructor(private router:Router,private registerService:RegisterService) { }
 
   pcp:Doctor;
 
