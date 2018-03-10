@@ -13,7 +13,7 @@ export class LoginService {
   private isUserLoggedIn;
   private loginId;
 
-  private loginsUrl = 'http://localhost:8085/ActualCare/rest/login/get';
+  private loginsUrl = 'http://18.217.216.74:8085/ActualCare/rest/login/get';
 
   getLogins(): Observable<Login[]> {
     return this.http.get<Login[]>(this.loginsUrl);

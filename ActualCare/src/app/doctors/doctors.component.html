@@ -1,10 +1,24 @@
-<h2>My Doctors</h2>
+<div class="row">
+    <div class="col-sm-4"><label for="text">Insurance:</label><br>
+      <select name="insurance" id="ins" (click)="onSelectIns()">
+          <option value="UNITED_HEALTH">UNITED_HEALTH</option>
+          <option value="WELL_CARE">WELL_CARE</option>
+          <option value="WELL_POINT">WELL_POINT</option>
+          <option value="OSCAR">OSCAR</option>
+          <option value="NO_INSURANCE">NO_INSURANCE</option>
+      </select>
+    </div>  		
+    <div class="col-sm-4">
+        <label for="text">Available Doctors:</label><br>
+          <ul class="doctors">
+            <li *ngFor="let doctor of doctors" (click)="onSelect(doctor)" >
+                <span class="badge">{{doctor.Doc_id}}</span> Dr.{{doctor.name}}
+            </li>
+          </ul>
+    </div>
+    <div class="col-sm-4">
+       <label for="text">Selected Primary Care Physician:<br><span class="badge">{{pcp}}</span></label>
+    </div>
+  </div>
 
-<ul class="doctors">
-  <li *ngFor="let doctor of doctors" >
-    <a routerLink="/detail/{{doctor.id}}">
-      <span class="badge">{{doctor.id}}</span> {{doctor.name}}
-    </a>
-  </li>
-</ul>
 

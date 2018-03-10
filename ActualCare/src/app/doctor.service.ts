@@ -18,23 +18,24 @@ export class DoctorService {
     this.messageService.add('DoctorService: ' + message);
   }
 
-  private doctorsUrl = 'http://localhost:8085/ActualCare/rest/test/get';// URL to web api
+  private doctorsUrl = 'http://18.217.216.74:8085/ActualCare/rest/insurance/get';// URL to web api
 
-  getDoctors(): Observable<Doctor[]> {
-    return this.http.get<Doctor[]>(this.doctorsUrl) .pipe(
+  getDoctors(ins: string): Observable<Doctor[]> {
+    const url = `${this.doctorsUrl}/${ins}`;
+    return this.http.get<Doctor[]>(url) .pipe(
       tap(doctors => this.log(`fetched doctors`)),
       catchError(this.handleError('getDoctors', []))
     );
     
   }
 
-  getDoctor(id: number): Observable<Doctor> {
-    const url = `${this.doctorsUrl}/${id}`;
-    return this.http.get<Doctor>(url).pipe(
-      tap(_ => this.log(`fetched doctor id=${id}`)),
-      catchError(this.handleError<Doctor>(`getDoctor id=${id}`))
-    );
-  }
+  // getDoctor(id: number): Observable<Doctor> {
+  //   const url = `${this.doctorsUrl}/${id}`;
+  //   return this.http.get<Doctor>(url).pipe(
+  //     tap(_ => this.log(`fetched doctor id=${id}`)),
+  //     catchError(this.handleError<Doctor>(`getDoctor id=${id}`))
+  //   );
+  // }
 
   /**
  * Handle Http operation that failed.
