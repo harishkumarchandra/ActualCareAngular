@@ -1,32 +1,29 @@
 
   <div class = "container">
-    <h3><strong>Patient Register</strong></h3><br><br>
+    <h3><strong>Patient Register</strong></h3><br>
 	 
   	<form method="POST" action="#" (submit)="register($event)" id="register">
-      <br>
       <div class = "row">
-        <div class="col-sm-6"><label for="text">First name:</label>
+        <div class="col-sm-4"><label for="text">First name:</label>
   			  <input type="text" class="form-control" id="firstname" required></div>
-        <div class="col-sm-6"><label for="text">Last name:</label>
+        <div class="col-sm-4"><label for="text">Last name:</label>
           <input type="text" class="form-control" id="lastname" required></div>
-      </div>  
-      <br>
-      <div class = "row">
-          <div class="col-sm-6"><label for="text">Gender:</label><br>
+          <div class= "col-sm-2"><label for="number">Age:</label>
+            <input type="number" class="form-control" id="age" required></div> 
+          <div class="col-sm-2"><label for="text">Gender:</label><br>
             <select name="insurance">
                 <option value="MALE">MALE</option>
                 <option value="FEMALE">FEMALE</option>
                 <option value="OTHER">OTHER</option>
             </select>
           </div>  
-      <div class= "col-sm-6"><label for="number">Age:</label>
-        <input type="number" class="form-control" id="age" required></div>
       </div>
+
       <br>
       <div class = "row">
-      <div class="col-sm-3"><label for="number">Door No:</label>
+      <div class="col-sm-2"><label for="number">Door No:</label>
         <input type="number" class="form-control" id="door" required></div>
-      <div class="col-sm-3"><label for="text">Street:</label>
+      <div class="col-sm-4"><label for="text">Street:</label>
         <input type="text" class="form-control" id="street" required></div>
       <div class="col-sm-3"><label for="text">City:</label>
         <input type="text" class="form-control" id="city" required></div>
@@ -46,7 +43,9 @@
       <app-doctors (messageEvent)="receiveMessage($event)"></app-doctors>
 
       <button style="margin-top: 15px;" type="submit" class="btn btn-success">Register</button>
-  		<button style="margin-top: 15px;" type="reset" class="btn btn-default">Reset</button>
+      <button style="margin-top: 15px;" type="reset" class="btn btn-default">Reset</button>
+      <button style="margin-top: 15px;" routerLink="/" class="btn">Back</button>
+
 	</form>
 	
   </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from '../login.service';
-import { Login } from '../login';
+import { LoginInfo } from '../login';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +10,7 @@ import { Login } from '../login';
 })
 export class LoginComponent implements OnInit {
 
-  logins: Login[];
+  logins: LoginInfo[];
   
 
   constructor(private router:Router, private loginService:LoginService) {   }

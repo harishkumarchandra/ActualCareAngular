@@ -1,7 +1,6 @@
 import { Component, OnInit, Output, EventEmitter  } from '@angular/core';
 import { Doctor } from '../doctor';
 import { DoctorService } from '../doctor.service'
-import {DOCTORS} from '../mock-doctors'
 
 @Component({
   selector: 'app-doctors',
@@ -12,7 +11,7 @@ export class DoctorsComponent implements OnInit {
 
   //doctors: Doctor[];
 
-  doctors = DOCTORS;
+  doctors: Doctor[];
 
   selectedInsurance: string;
   pcp:string;
