@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../login.service';
+import { Patient } from '../patient';
+import {PatientService} from '../patient.service';
 
 
 @Component({
@@ -9,12 +11,34 @@ import { LoginService } from '../login.service';
 })
 export class PatientComponent implements OnInit {
 
-  loginId = 0;
 
-  constructor(private loginService: LoginService) { }
+  loginId = 0;
+  patient: Patient;
+  
+  showPatient(){
+    console.log(this.patient);
+  }
+
+  updateAllergy(): void{
+    this.patientService.updateAllergy(this.loginId,this.patient.myAllgeries.a_name)
+    .subscribe();
+  }
+
+  updateSymptom(){
+    this.patientService.updateSymptom(this.loginId,this.patient.mySymptons.s_name)
+    .subscribe();
+  }
+  constructor(private loginService: LoginService, private patientService: PatientService) { }
+
+  getPatient(): Patient{
+      this.patientService.getPatient(this.loginId)
+      .subscribe(patient => this.patient=patient);
+      return this.patient;
+  }
 
   ngOnInit() {
     this.loginId = this.loginService.getLoginId();
+    this.getPatient();
   }
 
 }

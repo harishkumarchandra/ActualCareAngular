@@ -1,4 +1,5 @@
 export class LoginInfo {
+    login_id: number;
     email: string;
     password: string;
     role: string;

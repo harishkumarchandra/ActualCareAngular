@@ -25,7 +25,6 @@ export class DoctorsComponent implements OnInit {
 
   ngOnInit() {
     this.selectedInsurance = ((document.getElementById("ins") as HTMLInputElement).value);
-    console.log(this.selectedInsurance)
     this.getDoctors();
 
   }

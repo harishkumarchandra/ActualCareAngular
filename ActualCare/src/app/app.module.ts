@@ -20,6 +20,7 @@ import { AuthGuard } from './auth.guard';
 
 import { RegisterComponent } from './register/register.component';
 import { RegisterService } from './register.service';
+import { PatientService } from './patient.service';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { RegisterService } from './register.service';
     MessageService,
     LoginService,
     RegisterService,
+    PatientService,
     AuthGuard],
   bootstrap: [AppComponent]
 })

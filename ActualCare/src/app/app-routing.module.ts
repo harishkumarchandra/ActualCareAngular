@@ -22,7 +22,7 @@ const routes: Routes = [
 
   { path: 'doctor', canActivate: [AuthGuard] ,component: DoctorComponent },
   { path: 'admin', canActivate: [AuthGuard] ,component: AdminComponent },
-  { path: 'patient', canActivate: [AuthGuard] ,component: PatientComponent}
+  { path: 'patient' ,component: PatientComponent}
 
 ];
 
