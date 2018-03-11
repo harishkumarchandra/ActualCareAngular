@@ -24,6 +24,10 @@ export class PatientComponent implements OnInit {
     .subscribe();
   }
 
+  updateSymptom(){
+    this.patientService.updateSymptom(this.loginId,this.patient.mySymptons.s_name)
+    .subscribe();
+  }
   constructor(private loginService: LoginService, private patientService: PatientService) { }
 
   getPatient(): Patient{
