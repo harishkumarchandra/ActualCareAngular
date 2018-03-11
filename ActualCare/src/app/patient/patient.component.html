@@ -12,9 +12,9 @@
             <h4>Allergies: <strong>{{patient.myAllgeries.a_name | uppercase}}</strong></h4><br>
             <h5>Please entire any allegeries that you may have, one at a time, to ensure you 
                     receive the safest, most appriorate care possible.</h5>
-            <textarea rows="3" cols="110"[(ngModel)]="patient.myAllgeries.a_name" placeholder="a_name">
+            <textarea rows="2" cols="140"[(ngModel)]="patient.myAllgeries.a_name" placeholder="a_name">
             </textarea>
-            <button style="margin-top:-30px;margin-right:30px" class="btn btn-primary">SAVE</button>
+            <button style="margin-top:-30px;margin-right:30px" class="btn btn-primary" (click)="updateAllergy()">SAVE</button>
         </div>
         <div class="well">
             <p>Please Remember To Take Your Medication!</p>

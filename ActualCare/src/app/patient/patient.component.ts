@@ -16,8 +16,12 @@ export class PatientComponent implements OnInit {
   patient: Patient;
   
   showPatient(){
-    console.log("in showPatient");
     console.log(this.patient);
+  }
+
+  updateAllergy(): void{
+    this.patientService.updateAllergy(this.loginId,this.patient.myAllgeries.a_name)
+    .subscribe();
   }
 
   constructor(private loginService: LoginService, private patientService: PatientService) { }

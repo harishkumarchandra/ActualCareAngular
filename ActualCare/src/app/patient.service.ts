@@ -12,12 +12,18 @@ import { Doctor } from './doctor';
 @Injectable()
 export class PatientService {
 
-  private patientUrl = 'http://localhost:8085/ActualCare/rest/patient/getpatient';
- //18.217.216.74
+  private patientUrl = 'http://localhost:8085/ActualCare/rest/patient';
+ //18.217.216.74 
+
 
   getPatient(login_id: number): Observable<Patient> {
-    const url = `${this.patientUrl}/4100`;//${login_id}`;
+    const url = `${this.patientUrl}/getpatient/${login_id}`;
     return this.http.get<Patient>(url);
+  }
+
+  updateAllergy(Id:number,a_name:string): Observable<any> {
+    const url = `${this.patientUrl}/updatea/${Id}/${a_name}`;
+    return this.http.get(url);
   }
 
   constructor(private http: HttpClient,private messageService: MessageService) { }
