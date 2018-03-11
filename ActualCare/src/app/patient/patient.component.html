@@ -1,17 +1,22 @@
-
-<div class="container-fluid">
-    <div class="well">
+<div *ngIf = "patient">
+    <div class="container" >
+        <h2 (click)="showPatient()">Hello <strong>{{patient.myPersonalInfo.f_name + ' ' +patient.myPersonalInfo.l_name}}</strong></h2>
+        <br>
+        <br>
+        <div class = "row">
+            <div class="col-sm-8"><h4>Your current PCP is: <strong>Dr.{{patient.PCP}}</strong></h4></div>
+            <div class="col-sm-4"><h4 align="right">Your Insurance is: <strong>{{patient.myInsurance}}</strong></h4></div>
+        </div>
+        <br>
         <div class="well">
-<h2>Hello, welcome to your ActualCare home page, PATIENT_NAME !</h2>
+            <h4>Allergies: <strong>{{patient.myAllgeries.a_name | uppercase}}</strong></h4><br>
+            <h5>Please entire any allegeries that you may have, one at a time, to ensure you 
+                    receive the safest, most appriorate care possible.</h5>
+            <textarea rows="3" cols="110"[(ngModel)]="patient.myAllgeries.a_name" placeholder="a_name">
+            </textarea><br>
+            <button class="btn btn-primary">SAVE</button>
         </div>
         <div class="well">
-<h4>Your create diagnosis is as follows: DIAGONSIS_INFO</h4>
-<h4>Your current PCP is: DOCTOR NAME</h4>
-<h4>Our records indicate that you have the following insurance: INSURANCE_NAME</h4>
-        </div>
-    </div>
-    <br>
-    <div class="well">
             <p>Please Remember To Take Your Medication!</p>
                 <table border="2px" id="medtable" name="medtable">
                     <thead>
@@ -32,15 +37,7 @@
             </div>        
     <br>
     <div class="well">
-            <h4>Something making you itchy?</h4>
-        <form id="allergyform" name ="allergyform">
-            <h5>Please entire any allegeries that you may have, one at a time, to ensure you 
-                receive the safest, most appriorate care possible.
-            </h5>
-            <p>Do you have an allergies?<input type="text" id="allergy" name="allgery"
-                ><button type="submit">SUBMIT ALLERGY</button>
-            </p>
-        </form>
+           
     </div>
 
     <div class="well">
@@ -143,7 +140,8 @@
                 <br> <br>
             </div>
         </form>
-</div>
+    </div>
+</div>    
 <p>
   patient works! {{loginId}}
   <a routerLink="/">Go Back</a>

@@ -17,7 +17,7 @@ export class RegisterService {
     return this.http.post<Patient>(this.registerUrl, patient, httpOptions);
   }
 
-  private registerUrl = 'http://18.217.216.74:8085/ActualCare/rest/patient/post';
+  private registerUrl = 'http://localhost:8085/ActualCare/rest/patient/post';
   //18.217.216.74
 
   constructor(private http: HttpClient) { }

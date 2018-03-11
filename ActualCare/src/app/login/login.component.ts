@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
   private checkLogin(email: string, password: string) {
     for (let i in this.logins) {
       if (email == this.logins[i].email && password == this.logins[i].password) {
-        //this.loginService.setLoginId(this.logins[i].login_id);
+        this.loginService.setLoginId(this.logins[i].login_id);
         
         if (this.logins[i].role == 'patient') {
           this.loginService.setUserLoggedIn();
