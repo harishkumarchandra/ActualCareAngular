@@ -18,7 +18,7 @@ export class DoctorService {
     this.messageService.add('DoctorService: ' + message);
   }
 
-  private doctorsUrl = 'http://18.217.216.74:8085/ActualCare/rest/insurance/get';// URL to web
+  private doctorsUrl = 'http://18.217.216.74:8085/ActualCare/rest/insurance/get';// URL to 
   //18.217.216.74
 
   getDoctors(ins: string): Observable<Doctor[]> {
