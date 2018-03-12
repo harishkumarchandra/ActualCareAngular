@@ -1,4 +1,44 @@
-<p>
-  admin works! {{loginId}}
-  <a routerLink="/">Go Back</a>
-</p>
+
+
+<div class="container">
+    <h2>Hello ADMINISTRATOR</h2>
+  <br>
+  <div class="well">
+        <h4><b>Medical Bills:</b></h4><br>
+              <table class="table-bordered" id="medtable" name="medtable">
+                  <thead class = "row">
+                        <th class = "col-sm-4">NAME</th>
+                        <th class = "col-sm-4">INSURANCE</th>
+                        <th class = "col-sm-4">BILL</th>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>        
+      <br>
+      <div class="well">
+            <h4><b>Appointments:</b></h4><br>
+              <table class="table-bordered" id="currentapptable" name="currentapptable">
+                  <thead class="row">
+                        <th class="col-sm-3">DATE</th>
+                        <th class="col-sm-3">TIME</th>
+                        <th class="col-sm-3">PATIENT</th>
+                        <th class="col-sm-3">DOCTOR</th>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                  </tbody>
+              </table>
+      </div>
+      <br>
+      <button style="margin-top: 15px;" routerLink="/" class="btn">Back</button>
+</div>

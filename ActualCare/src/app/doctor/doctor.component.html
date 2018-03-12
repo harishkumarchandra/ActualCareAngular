@@ -1,21 +1,15 @@
 
 
-<div class="container-fluid">
-  <div class="well">
-      <div class="well">
-<h2>Hello, welcome to your ActualCare home page, DOCTOR_NAME !</h2>
-      </div>
-  </div>
+<div class="container">
+    <h2>Hello DOCTOR</h2>
   <br>
   <div class="well">
-          <p>Below are all your current patients:</p>
-              <table border="2px" id="medtable" name="medtable">
-                  <thead>
-                      <tr>
-                          <td>PATIENT NAME</td>
-                          <td>PATIENT AGE</td>
-                          <td>PATIENT SEX</td>
-                      </tr>
+        <h4><b>Patients:</b></h4><br>
+              <table class="table-bordered" id="medtable" name="medtable">
+                  <thead class = "row">
+                        <th class = "col-sm-4">NAME</th>
+                        <th class = "col-sm-4">AGE</th>
+                        <th class = "col-sm-4">SEX</th>
                   </thead>
                   <tbody>
                       <tr>
@@ -28,14 +22,12 @@
           </div>        
       <br>
       <div class="well">
-          <p>You will find your next upcoming appointments below:</p>
-              <table border="2px" id="currentapptable" name="currentapptable">
-                  <thead>
-                      <tr>
-                          <td>DATE</td>
-                          <td>TIME</td>
-                          <td>PATIENT</td>
-                      </tr>
+            <h4><b>Appointments:</b></h4><br>
+              <table class="table-bordered" id="currentapptable" name="currentapptable">
+                  <thead class="row">
+                        <th class="col-sm-4">DATE</th>
+                        <th class="col-sm-4">TIME</th>
+                        <th class="col-sm-4">PATIENT</th>
                   </thead>
                   <tbody>
                       <tr>
@@ -47,9 +39,5 @@
               </table>
       </div>
       <br>
+      <button style="margin-top: 15px;" routerLink="/" class="btn">Back</button>
 </div>
-
-<p>
-  doctor works! {{loginId}}
-  <a routerLink="/">Go Back</a>
-</p>
